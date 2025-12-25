@@ -1,0 +1,434 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Build Your Business | Professional Web Solutions</title>
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+        <!-- Animation Library (AOS) -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
+        <!-- Slider Library (Swiper) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+        <style>
+            /* --- GENERAL SETTINGS --- */
+            :root {
+                --primary-blue: #0056b3;
+                --accent-blue: #007bff;
+                --light-blue: #e3f2fd;
+                --white: #ffffff;
+                --dark-text: #333333;
+                --gray-bg: #f8f9fa;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+                background-color: var(--white);
+                color: var(--dark-text);
+                overflow-x: hidden;
+            }
+
+            html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            /* --- HEADER / HERO SECTION --- */
+            header {
+                text-align: center;
+                padding: 40px 20px;
+                background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
+            }
+
+         body{margin:0;font-family:Poppins,sans-serif}
+header{padding:30px;text-align:center}
+.logo img{max-width:220px;height:auto}
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+                color: var(--dark-text);
+                line-height: 1.2;
+            }
+
+            .whatsapp-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                background-color: #25D366; /* WhatsApp Brand Color */
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                border-radius: 50px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .whatsapp-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+            }
+
+            /* --- CONTACT PHOTOS (SLIDER 1) --- */
+            .contact-slider-section {
+                background-color: var(--white);
+            }
+
+            .swiper-container {
+                width: 100%;
+                padding-bottom: 40px;
+            }
+
+            .photo-card {
+                height: 300px;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+
+            /* --- ABOUT SECTION --- */
+            .about-section {
+                background-color: var(--gray-bg);
+            }
+
+            .about-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .large-image-block {
+                height: 400px; /* Fixed height for consistency */
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 86, 179, 0.15);
+            }
+
+            /* --- BUSINESS WEBSITE SECTION (SLIDER 2) --- */
+            .business-slider-section {
+                background-color: var(--white);
+            }
+
+            .business-card {
+                height: 250px;
+                border-radius: 12px;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .business-card img {
+                transition: transform 0.5s ease;
+            }
+
+            .business-card:hover img {
+                transform: scale(1.1);
+            }
+
+            /* --- BUSINESS DETAILS SECTION --- */
+            .details-section {
+                background-color: var(--light-blue);
+            }
+
+            .details-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                align-items: start;
+            }
+
+            .details-block {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .details-img-wrapper {
+                height: 350px;
+                width: 100%;
+                border-radius: 12px;
+                overflow: hidden;
+                border: 4px solid var(--white);
+            }
+
+            /* Special Animated Button */
+            .glow-btn {
+                background-color: var(--primary-blue);
+                color: white;
+                padding: 15px 0;
+                width: 200px;
+                text-align: center;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 600;
+                position: relative;
+                z-index: 1;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                border: none;
+            }
+
+            .glow-btn:hover {
+                background-color: var(--accent-blue);
+                box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+                transform: scale(1.05);
+            }
+
+            /* Pulse Animation Keyframes */
+            .glow-btn::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                background: inherit;
+                border-radius: inherit;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                animation: pulse-ring 2s infinite;
+                opacity: 0.6;
+            }
+
+            @keyframes pulse-ring {
+                0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+                100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+            }
+
+            /* --- FOOTER --- */
+            footer {
+                background-color: var(--primary-blue);
+                padding: 40px 0;
+                text-align: center;
+            }
+
+            .social-icons {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+            }
+
+            .social-link {
+                color: var(--white);
+                font-size: 2rem;
+                transition: all 0.3s ease;
+            }
+
+            .social-link:hover {
+                color: #ffc107; /* Highlight color */
+                transform: rotate(10deg) scale(1.2);
+            }
+
+            /* --- RESPONSIVE DESIGN --- */
+            @media (max-width: 768px) {
+                h1 { font-size: 1.8rem; }
+                .about-grid, .details-grid { grid-template-columns: 1fr; }
+                .large-image-block { height: 300px; }
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Header / Hero -->
+        <header data-aos="fade-down">
+            <!-- <div class="logo">
+                <i class="fas fa-layer-group"></i> Webfolio
+            </div> -->
+
+
+
+ <div class="logo">
+    <img src="logo.png" alt="Webfolio Logo">
+  </div>
+
+
+
+            
+            <div class="container">
+                <h1>We Build Website That Build Your <br> <span style="color: var(--primary-blue);">Business / Career</span></h1>
+                
+                <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </header>
+
+        <!-- Contact Photos (Slider: Right to Left) -->
+        <section class="contact-slider-section">
+            <div class="container">
+                <h2 style="text-align:center; margin-bottom:30px; color:var(--primary-blue);">Connect With Us</h2>
+                <!-- Swiper -->
+                <div class="swiper contactSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- 4 Contact Cards -->
+                        <div class="swiper-slide"><div class="photo-card"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80" alt="Contact 1"></div></div>
+                        <div class="swiper-slide"><div class="photo-card"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80" alt="Contact 2"></div></div>
+                        <div class="swiper-slide"><div class="photo-card"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=80" alt="Contact 3"></div></div>
+                        <div class="swiper-slide"><div class="photo-card"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=80" alt="Contact 4"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <h2 style="text-align:center; margin-bottom:30px; color:var(--primary-blue);">About Us</h2>
+                <div class="about-grid">
+                    <!-- Large Photo 1 -->
+                    <div class="large-image-block" data-aos="fade-right" data-aos-duration="1000">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="About Photo 1">
+                    </div>
+                    <!-- Large Photo 2 -->
+                    <div class="large-image-block" data-aos="fade-left" data-aos-duration="1000">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" alt="About Photo 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Website Section (Slider: Left to Right) -->
+        <section class="business-slider-section">
+            <div class="container">
+                <h2 style="text-align:center; margin-bottom:30px; color:var(--primary-blue);">Our Portfolio</h2>
+                <!-- Swiper -->
+                <div class="swiper businessSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- 4 Business Cards -->
+                        <div class="swiper-slide"><div class="business-card"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="Business 1"></div></div>
+                        <div class="swiper-slide"><div class="business-card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&q=80" alt="Business 2"></div></div>
+                        <div class="swiper-slide"><div class="business-card"><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=500&q=80" alt="Business 3"></div></div>
+                        <div class="swiper-slide"><div class="business-card"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=80" alt="Business 4"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Website Details Section -->
+        <section class="details-section">
+            <div class="container">
+                <div class="details-grid">
+                    
+                    <!-- Left Block: Image + Button -->
+                    <div class="details-block">
+                        <div class="details-img-wrapper" data-aos="zoom-in">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" alt="Business Detail 1">
+                        </div>
+                        <!-- Animated Button -->
+                        <button class="glow-btn" onclick="alert('Action Triggered!')">
+                            Get Started
+                        </button>
+                    </div>
+
+                    <!-- Right Block: Image Only -->
+                    <div class="details-block">
+                        <div class="details-img-wrapper" data-aos="zoom-in" data-aos-delay="200">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80" alt="Business Detail 2">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-messenger"></i></a>
+                </div>
+                <p style="color: rgba(255,255,255,0.7); margin-top: 20px; font-size: 0.9rem;">
+                    © 2023 Your Company. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+            // 1. Initialize Animation on Scroll (AOS)
+            AOS.init({
+                offset: 120, 
+                duration: 800, 
+                easing: 'ease-in-out',
+                once: true // Animations happen only once
+            });
+
+            // 2. Contact Slider (Right to Left / Standard Direction)
+            var contactSwiper = new Swiper(".contactSwiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    640: { slidesPerView: 2 },
+                    768: { slidesPerView: 3 },
+                    1024: { slidesPerView: 4 },
+                },
+            });
+
+            // 3. Business Slider (Left to Right)
+            // Note: 'reverseDirection' makes the visual flow go left-to-right
+            var businessSwiper = new Swiper(".businessSwiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                    reverseDirection: true, // This creates the Left-to-Right effect
+                },
+                breakpoints: {
+                    640: { slidesPerView: 2 },
+                    768: { slidesPerView: 3 },
+                    1024: { slidesPerView: 4 },
+                },
+            });
+        </script>
+    </body>
+    </html>
